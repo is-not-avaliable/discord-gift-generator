@@ -8,7 +8,7 @@ init()
 # find current OS Name to clear command
 clear = ""
 osname = platform.system()
-print(osname)
+
 if str(osname).lower() == "windows":
     clear = os.system("cls")
 else:
@@ -41,7 +41,7 @@ try:
     from discord_webhook import DiscordWebhook
 except ImportError:  # If it chould not be installed
     print(
-        f"Lib discord_webhook not installed. Run python3 -m pip install discord_webhook")
+        f"Lib discord_webhook not installed. Run python3 -m pip install discord_webhook\n\n")
     USE_WEBHOOK = False
 
 # Object

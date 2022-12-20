@@ -1,0 +1,4 @@
+colorama = "*"
+requests = "*"
+numpy = "*"
+discord-webhook = "*"

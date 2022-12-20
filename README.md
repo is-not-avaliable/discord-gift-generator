@@ -8,7 +8,7 @@ A simple Discord gift generator &amp; CHECKER in Python
 
 * Descargar o clonar el repositorio
 
-<img src="download.png" weight=100cm height=200cm>
+<img src="img/download.png" weight=100cm height=200cm>
 
 ```bash
 git clone https://github.com/is-not-avaliable/discord-gift-generator
@@ -32,11 +32,11 @@ user@host: /discord-gift-generator$ python3 main.py
 
 ## ¿Cómo chequean las url?
 
-<img src="check.png">
+<img src="img/check.png">
 
 ## ¿Cómo se generan las url's?
 
-<img src="gen.png">
+<img src="img/gen.png">
 
 ## No puedo usar el script porque no tengo los requerimientos. ¿Qué hago?
 

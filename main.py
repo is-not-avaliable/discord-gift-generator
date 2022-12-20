@@ -25,10 +25,10 @@ banner = f"""{Fore.GREEN}
 """
 
 # functions
-def slow_print(*args):
+def slow_print(args):
     for i in args:
         print(i, flush=True, end="")
-        time.sleep(.2)
+        time.sleep(.02)
 
 
 
@@ -84,7 +84,7 @@ class NitroGenerator:  # Initialise
         for s in c:  # Loop over the amount of codes to check
             try:
                 code = ''.join(x for x in s)
-                url = f"{Fore.GREEN}https://discord.gift/{code}{Fore.RESET}"  # Generate the url
+                url = f"https://discord.gift/{code}"  # Generate the url
 
                 result = self.quickChecker(url, webhook)  # Check the codes
 
@@ -100,7 +100,6 @@ class NitroGenerator:  # Initialise
                     x = input("you're sure to stop the generator? (Y/N) ")
                     if x.lower() == "y":
                         print("\nInterrupted by user")
-                        break  # Break the loop
                         exit() # and exit
                     elif x.lower() == "n":
                         print("OK!")
@@ -112,7 +111,7 @@ class NitroGenerator:  # Initialise
                 print(f"{Fore.RED} Error | {url} {Fore.RESET}")
 
 
-                print(f'{Fore.MAGENTA}Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid\a', end='', flush=True)
+                print(f'{Fore.MAGENTA}Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid\a')
 
         # show data
         print(f"""{Fore.LIGHTBLUE_EX}
@@ -130,7 +129,7 @@ Results:
 
         if response.status_code == 200:  # If the responce went through
             # Notify the user the code was valid
-            print(f" Valid | {nitro} ", flush=True, end="")
+            print(f"{Fore.GREEN} Valid | {nitro} ")
 
             with open("Nitro Codes.txt", "w") as file:  # Open file to write
                 # Write the nitro code to the file it will automatically add a newline
@@ -147,7 +146,7 @@ Results:
         # If the responce got ignored or is invalid
         else:
             # Tell the user it tested a code and it was invalid
-            print(f" Invalid | {nitro} ", flush=True, end="")
+            print(f"{Fore.RED} Invalid | {nitro} ")
             return False  # Tell the main function there was not a code found
 
 

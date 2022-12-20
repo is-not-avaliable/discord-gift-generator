@@ -61,7 +61,7 @@ class NitroGenerator:  # Initialise
 
         if USE_WEBHOOK:
             # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
-            slow_print("If you want to use a Discord webhook, type it here or press enter to ignore: ", .02, newLine=False)
+            slow_print("If you want to use a Discord webhook, type it here or press enter to ignore: ")
             url = input('')  # Get the awnser
 
             webhook = url if url != "" else None

@@ -43,6 +43,6 @@ user@host: /discord-gift-generator$ python3 main.py
 * Instalar los requermientos con el siguiente comando:
 
 ```bash
-user@host: /discord-gift-generator$ pip3 -r install requirements.txt
+user@host: /discord-gift-generator$ pip3 install -r requirements.txt
 ```
 
